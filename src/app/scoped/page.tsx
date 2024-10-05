@@ -6,33 +6,26 @@ import Controls from "@/components/scoped/controls"
 import { ImageStoreProvider } from "@/components/providers/image-store-provider"
 
 export default function WithContextPage() {
-  const imageSources = {
-    one: "https://picsum.photos/150/150?1",
-    two: "https://picsum.photos/150/150?2",
-    three: "https://picsum.photos/150/150?3",
-    four: "https://picsum.photos/150/150?4",
-    five: "https://picsum.photos/150/150?5",
-  }
   const images: ImageType[] = [
     {
       title: "Image 1",
-      src: imageSources.one,
+      src: "https://picsum.photos/150/150?1",
     },
     {
       title: "Image 2",
-      src: imageSources.two,
+      src: "https://picsum.photos/150/150?2",
     },
     {
       title: "Image 3",
-      src: imageSources.three,
+      src: "https://picsum.photos/150/150?3",
     },
     {
       title: "Image 4",
-      src: imageSources.four,
+      src: "https://picsum.photos/150/150?4",
     },
     {
       title: "Image 5",
-      src: imageSources.five,
+      src: "https://picsum.photos/150/150?5",
     },
   ]
 

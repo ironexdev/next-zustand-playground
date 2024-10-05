@@ -1,48 +1,30 @@
 "use client"
 
 import React from "react"
-import { useImageGrayscale, useImageRotation } from "@/stores/image-slice"
 import Controls from "@/components/global/controls"
 import MyImage, { ImageType } from "@/components/global/my-image"
 
 export default function HomePage() {
-  const imageSources = {
-    one: "https://picsum.photos/150/150?1",
-    two: "https://picsum.photos/150/150?2",
-    three: "https://picsum.photos/150/150?3",
-    four: "https://picsum.photos/150/150?4",
-    five: "https://picsum.photos/150/150?5",
-  }
   const images: ImageType[] = [
     {
       title: "Image 1",
-      src: imageSources.one,
-      rotation: useImageRotation(imageSources.one),
-      grayscale: useImageGrayscale(imageSources.one),
+      src: "https://picsum.photos/150/150?1",
     },
     {
       title: "Image 2",
-      src: imageSources.two,
-      rotation: useImageRotation(imageSources.two),
-      grayscale: useImageGrayscale(imageSources.two),
+      src: "https://picsum.photos/150/150?2",
     },
     {
       title: "Image 3",
-      src: imageSources.three,
-      rotation: useImageRotation(imageSources.three),
-      grayscale: useImageGrayscale(imageSources.three),
+      src: "https://picsum.photos/150/150?3",
     },
     {
       title: "Image 4",
-      src: imageSources.four,
-      rotation: useImageRotation(imageSources.four),
-      grayscale: useImageGrayscale(imageSources.four),
+      src: "https://picsum.photos/150/150?4",
     },
     {
       title: "Image 5",
-      src: imageSources.five,
-      rotation: useImageRotation(imageSources.five),
-      grayscale: useImageGrayscale(imageSources.five),
+      src: "https://picsum.photos/150/150?5",
     },
   ]
 

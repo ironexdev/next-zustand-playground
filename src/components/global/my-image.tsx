@@ -1,18 +1,20 @@
 import React from "react"
+import { useImageGrayscale, useImageRotation } from "@/stores/image-slice"
 
 export type ImageType = {
   title: string
   src: string
-  rotation: number | undefined
-  grayscale: boolean | undefined
 }
 
 export default function MyImage({ image }: { image: ImageType }) {
+  const rotation = useImageRotation(image.src)
+  const grayscale = useImageGrayscale(image.src)
+
   return (
     <img
       style={{
-        transform: `rotate(${image.rotation}deg)`,
-        filter: image.grayscale ? "grayscale(100%)" : "none",
+        transform: `rotate(${rotation}deg)`,
+        filter: grayscale ? "grayscale(100%)" : "none",
       }}
       className="block"
       src={image.src}
